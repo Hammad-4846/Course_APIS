@@ -15,7 +15,7 @@ const { isAutheticatedUser } = require("../middlewares/isAuthenticatedUser");
 
 //To Handle Multi-part Data
 const multer = require("multer")
-const upload = multer({dest : "uploads/"});
+const upload = multer({dest : "tmp/"});
 
 
 //User Authentication Routes
