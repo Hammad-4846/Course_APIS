@@ -3,7 +3,7 @@ const UserModal = require("../models/UserModal");
 const { error, success } = require("../utils/responseWrapper");
 const crypto = require("crypto");
 const cloudinary = require("cloudinary").v2;
-const fs = require("fs");
+const fs = require("@cyclic.sh/s3fs")(process.env.CYCLIC_BUCKET_NAME)
 
 //TO Send Emails
 const resend = new Resend(process.env.RESEND_KEY);
